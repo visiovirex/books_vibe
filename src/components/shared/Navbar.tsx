@@ -4,8 +4,8 @@ import Image from "next/image";
 
 function Navbar() {
   return (
-    <div>
-      <div className="navbar bg-base-100 shadow-sm ">
+    <nav className="bg-base-100 shadow-sm">
+      <div className="navbar container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -64,7 +64,7 @@ function Navbar() {
           <button className="btn bg-[#59C6D2]">Sign up</button>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 
