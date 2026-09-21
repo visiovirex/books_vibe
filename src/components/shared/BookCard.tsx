@@ -1,13 +1,13 @@
-
 import { Book } from "@/types/books";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface BookCardProps {
-    book: Book;
+  book: Book;
 }
 
-function BookCard({ book }:BookCardProps) {
+function BookCard({ book }: BookCardProps) {
   return (
     <div className="rounded-lg border border-gray-200 bg-white p-2 shadow-sm">
       <div className="flex h-52 items-center justify-center rounded-lg bg-gray-100 p-4">
@@ -31,13 +31,10 @@ function BookCard({ book }:BookCardProps) {
             </span>
           ))}
         </div>
-
         <h3 className="truncate text-base font-bold text-gray-900">
           {book.bookName}
         </h3>
-
         <p className="mt-1 text-xs text-gray-500">By : {book.author}</p>
-
         <div className="mt-5 flex items-center justify-between border-t border-gray-100 pt-3">
           <span className="text-xs text-gray-500">{book.category}</span>
 
@@ -46,6 +43,13 @@ function BookCard({ book }:BookCardProps) {
             <span className="text-sm">☆</span>
           </div>
         </div>
+        {/* View Details Button */}{" "}
+        <Link href={`/books/${book.bookId}`}>
+          <button className="mt-4 cursor-pointer w-full rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-green-700">
+            {" "}
+            View Details{" "}
+          </button>
+        </Link>
       </div>
     </div>
   );
