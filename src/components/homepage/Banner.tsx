@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import bannerImage from "@/assets/hero_img.jpg";
+import Link from "next/link";
 
 function Banner() {
   return (
@@ -13,7 +14,7 @@ function Banner() {
               your bookshelf
             </h1>
 
-            <button className="btn btn-success">View The List</button>
+            <Link href="/listedbooks" className="btn btn-success">View The List</Link>
           </div>
 
           <div className="flex justify-center">
