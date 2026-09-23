@@ -3,9 +3,16 @@ import type { Book } from "@/types/books";
 import BookCard from "../shared/BookCard";
 
 const getBooks = async (): Promise<Book[]> => {
-  const response = await fetch("http://localhost:3000/booksData.json");
+  try{
+    const response = await fetch(
+    `${process.env.NEXT_PUBLIC_SERVER_URL}/booksData.json`,
+  );
   const data = await response.json();
   return data;
+  } catch (error){
+    console.error("Error fetching books:", error);
+    return [];
+  }
 };
 
 const Books = async () => {

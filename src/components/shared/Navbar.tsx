@@ -35,10 +35,10 @@ function Navbar() {
                 <Link href="/books">Books</Link>
               </li>
               <li>
-                <a>Parent</a>
+                <Link href="/listedbooks">Listed Books</Link>
               </li>
               <li>
-                <a>Item 3</a>
+                <Link href="/read-books">Read Books</Link>
               </li>
             </ul>
           </div>
@@ -55,10 +55,10 @@ function Navbar() {
               <Link href="/books">Books</Link>
             </li>
             <li>
-              <a>Parent</a>
+              <Link href="/listedbooks">Listed Books</Link>
             </li>
             <li>
-              <a>Item 3</a>
+              <Link href="/read-books">Read Books</Link>
             </li>
           </ul>
         </div>
